@@ -5,6 +5,8 @@ import helmet from 'helmet';
 import fs from 'fs';
 import path from 'path';
 
+import tweetsRoutes from './routes/tweets';
+
 config();
 
 (async () => {
@@ -22,7 +24,7 @@ config();
         app.use(morgan('dev'));
     }
 
-    app.get('/', (_, res) => res.json({ msg: 'Hello World!' }));
+    app.use('/tweets', tweetsRoutes);
 
     app.listen(port, () => console.log(`Server is running on ${port} ...`));
 })();

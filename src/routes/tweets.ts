@@ -6,11 +6,10 @@ const router = Router();
 router.post('/', async (req: Request, res: Response) => {
     const { username } = req.body;
     try {
-        const tweets = await analyize(username);
-        res.json({ tweets });
+        const data = await analyize(username);
+        return res.json({ data });
     } catch (e) {
-        res.status(500).json({ msg: 'Server Error' });
-        throw new Error(e);
+        return res.status(500).json({ msg: 'Server Error' });
     }
 });
 

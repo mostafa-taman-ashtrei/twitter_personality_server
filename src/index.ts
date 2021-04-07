@@ -4,6 +4,7 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 import fs from 'fs';
 import path from 'path';
+import cors from 'cors';
 
 import tweetsRoutes from './routes/tweets';
 
@@ -14,6 +15,7 @@ config();
     const port = process.env.PORT || 8080;
 
     app.use(helmet());
+    app.use(cors({ origin: process.env.ORIGIN }));
     app.use(express.json());
     app.use(express.urlencoded({ extended: false }));
 

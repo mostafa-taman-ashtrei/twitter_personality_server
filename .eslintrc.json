@@ -28,7 +28,8 @@
             "error",
             4
         ],
-        "import/extensions": "off"
+        "import/extensions": "off",
+        "import/prefer-default-export": "off"
     },
     "settings": {
         "import/resolver": {

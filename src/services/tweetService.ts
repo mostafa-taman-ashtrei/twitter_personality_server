@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import Twitter from 'twitter';
 import PersonalityInsightsV3 from 'ibm-watson/personality-insights/v3';
 import { IamAuthenticator } from 'ibm-watson/auth';

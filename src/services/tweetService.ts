@@ -15,9 +15,9 @@ const personalityInsights = new PersonalityInsightsV3({
 
 export const getTweets = (username: string): Promise<string[]> => new Promise((resolve, reject) => {
     T.get('statuses/user_timeline', { screen_name: username, count: 100 }, (error, tweets, response) => {
-        if (error) reject(error);
-        if (!tweets) reject(new Error('Errrrrrrror'));
-        if (response.statusCode === 404) reject(new Error('Invalid username'));
+        if (error) return reject(error);
+        if (!tweets) return reject(new Error('A Server Error Occured'));
+        if (response.statusCode === 404) return reject(new Error('Invalid username'));
 
         const tweetsText: string[] = [];
         tweets.map((tweet: any) => tweetsText.push(tweet.text));

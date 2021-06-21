@@ -53,11 +53,11 @@ var personalityInsights = new v3_1.default({
 var getTweets = function (username) { return new Promise(function (resolve, reject) {
     T.get('statuses/user_timeline', { screen_name: username, count: 100 }, function (error, tweets, response) {
         if (error)
-            reject(error);
+            return reject(error);
         if (!tweets)
-            reject(new Error('Errrrrrrror'));
+            return reject(new Error('A Server Error Occured'));
         if (response.statusCode === 404)
-            reject(new Error('Invalid username'));
+            return reject(new Error('Invalid username'));
         var tweetsText = [];
         tweets.map(function (tweet) { return tweetsText.push(tweet.text); });
         return resolve(tweetsText);

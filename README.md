@@ -21,6 +21,8 @@ An app that performs personality analysis based in a users recent tweets. The ap
 
 - <img   alt="express" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/express/express.png" /> Express
 
+- <img   alt="eslint" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/eslint/eslint.png" /> eslint
+
 <br />
 
 # Getting Started
